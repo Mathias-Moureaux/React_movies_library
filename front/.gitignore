@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+:path_to_ignore
+:path_to_ignore
+
+
+#back
+db.js

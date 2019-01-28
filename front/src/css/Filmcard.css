@@ -1,0 +1,19 @@
+.card{
+  min-height: 520px;
+  margin-bottom: 20px;
+}
+
+.card-img-top{
+  max-height: 330px;
+  padding: 10px;
+}
+
+.card-title{
+font-weight: bold;
+font-size: 18px;
+}
+
+.btn .btn-secondary{
+  background-color: lawngreen;
+  border-color: none;
+}

@@ -1,0 +1,13 @@
+.filmpage-style{
+  background-color: #e7eaed;
+}
+
+.jumbotron .jumbotron-fluid{
+  display:flex;
+  justify-content: center;
+}
+
+.movie-pic{
+  width: 100%;
+  max-height: 40%;
+}

@@ -1,0 +1,14 @@
+.media {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.media{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+

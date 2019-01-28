@@ -1,0 +1,28 @@
+.movie-genre{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  margin: 0 20px;
+}
+
+.input-group{
+ width: 70%;
+}
+
+.login{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  width: 15%;
+  margin: 0 20px;
+}
+
+a:link{
+  text-decoration: none;
+  color: black;
+}
+
+
+.nav{
+  padding: 10px 20px;
+}

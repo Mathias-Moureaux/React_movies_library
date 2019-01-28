@@ -1,0 +1,10 @@
+.resultpage-style{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e7eaed;
+}
+
+.result-table{
+  margin : 20px auto;
+}

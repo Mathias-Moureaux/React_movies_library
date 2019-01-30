@@ -76,9 +76,9 @@ router.get('/cineclub/movies/search/:search', (req, res) => {
 
 /* DELETE */
 
-router.delete('/cineclub/movies/remove_movie/:id', (req, res) => {
+router.delete('/cineclub/movies/:id', (req, res) => {
   const idMovie = req.params.id;
-  connection.query('DELETE FROM indiegames WHERE id= ?', [idMovie], (err) => {
+  connection.query('DELETE FROM movies WHERE id=?', idMovie, (err) => {
     if (err) {
       res.status(500).send("Erreur lors de la suppression d'un film");
     } else {

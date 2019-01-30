@@ -13,9 +13,14 @@ class Adminpage extends Component {
     this.state = {
       allmovies: [],
     }
+    this.getMoviesBySearch = this.getMoviesBySearch.bind(this);
   }
 
   componentDidMount() {
+    this.getMoviesBySearch();
+  }
+
+  getMoviesBySearch() {
     fetch(`http://localhost:5000/cineclub/movies/`)
       .then(res => res.json())
       .then(data => {
@@ -23,28 +28,29 @@ class Adminpage extends Component {
           allmovies: data,
         });
       });
-  }
+    }
+
+
   render() {
     return (
       <div className="homepage-style">
         <NavBar />
         {this.state.allmovies.map(movie => <Row>
-            <Col md={{ size: 10, offset: 1 }}>
-              <Filmadmin
-                key={movie.id}
-                id={movie.id}
-                name={movie.name}
-                director={movie.director}
-                date={movie.date}
-                poster={movie.poster}
-                rating={movie.rating}
-              />
-            </Col>
-          </Row>)}
+          <Col md={{ size: 10, offset: 1 }}>
+            <Filmadmin
+              key={movie.id}
+              id={movie.id}
+              name={movie.name}
+              director={movie.director}
+              date={movie.date}
+              poster={movie.poster}
+              rating={movie.rating}
+            />
+          </Col>
+        </Row>)}
         <Footer />
       </div>
     );
   }
 }
-
-  export default Adminpage;
+export default Adminpage;

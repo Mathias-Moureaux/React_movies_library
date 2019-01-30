@@ -5,19 +5,22 @@ import '../css/Filmmedia.css';
 class Filmadmin extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
- 
+    this.state = {
      }
-    // this.deleteMovie=this.deleteMovie.bind(this);
+     this.deleteMovie = this.deleteMovie.bind(this);
   }
 
 
-  // deleteMovie(id) {
-  //   fetch(`/cineclub/movies/remove_movie/${this.props.id}`, {
-  //     method: 'DELETE',
-  //   })
-  //     .then()
-  // }
+  deleteMovie(id) {
+    fetch(`http://localhost:5000/cineclub/movies/${id}`, {
+      method: 'DELETE'
+    })
+    //mettre à jour les props ?
+  }
+
+
+  // INSERT INTO `movies` (`id`, `name`, `date`, `director`, `id_genre`, `rating`, `poster`) VALUES ('8', 'Glass', '2019-01-09', 'Night M. Shyamalan', '2', '82', 'https://media.senscritique.com/media/000018326963/source_big/Glass.jpg');
+
 
 
   render() {
@@ -39,7 +42,7 @@ class Filmadmin extends Component {
             <Media>
             Director : {this.props.director} 
             </Media>
-            <Media>Release date : {this.props.date} <span><Button color="danger" id={this.props.id} href={this.props.id}>DELETE</Button ></span></Media>
+            <Media>Release date : {this.props.date}<span><Button color="danger" id={this.props.id} onClick={() => this.deleteMovie(this.props.id)}>DELETE</Button ></span></Media>
           </Media>
         </Media>
       </div>

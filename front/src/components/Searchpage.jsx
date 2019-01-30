@@ -12,7 +12,6 @@ class Searchpage extends Component {
       moviesbysearch: [],
     }
     this.getMoviesBySearch = this.getMoviesBySearch.bind(this);
-
   }
 
   componentDidMount() {

@@ -51,7 +51,7 @@ class NavBar extends Component {
     // console.log(this.state.search)
     return (
       <div>
-        <Navbar className="navbar-fixed-top navbar-style" color="white" light expand="md">
+        <Navbar className="navbar-fixed-top navbar-style" color="success" light expand="md">
           <NavLink to="/">
             <NavbarBrand className="navbar-brand d-inline align-center">My CinéClub</NavbarBrand>
           </NavLink>

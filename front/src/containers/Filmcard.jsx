@@ -25,7 +25,7 @@ class Filmcard extends Component {
               <CardTitle>{this.props.name}</CardTitle>
               <CardSubtitle>Director : {this.props.director}</CardSubtitle>
               <CardText>Rating: {this.props.rating}/100</CardText>
-              <NavLink to={`/filmpage/${this.props.id}`}><Button>Movie details</Button></NavLink>
+              <NavLink to={`/filmpage/${this.props.id}`}><Button color='info'>Movie details</Button></NavLink>
             </CardBody>
           </Card>
         </div>
